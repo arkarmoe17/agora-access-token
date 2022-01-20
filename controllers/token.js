@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const tokenController = require('../controller/token')
+const tokenService = require('../services/tokenService')
 
 const nocache = (req, resp, next) => {
     resp.header('Access-Control-Allow-Origin', '*');
@@ -13,10 +13,10 @@ const nocache = (req, resp, next) => {
 //generate tokens
 router
     .route('/rtc')
-    .get(nocache,tokenController.generateRtcToken);
+    .get(nocache,tokenService.generateRtcToken);
 
 router
     .route("/rtm")
-    .get(nocache,tokenController.generateRtmToken);
+    .get(nocache,tokenService.generateRtmToken);
 
 module.exports = router;
