@@ -1,6 +1,6 @@
 const Joi = require('joi');
 const https = require('https')
-const APP_ID = process.env.APP_ID;
+const { APP_ID } = process.env;
 
 //Authorization RTM Token
 function authorizationRTMToken(req, resp) {

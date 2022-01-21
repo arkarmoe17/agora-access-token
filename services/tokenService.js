@@ -1,5 +1,4 @@
-const APP_ID = process.env.APP_ID;
-const APP_CERTIFICATE = process.env.APP_CERTIFICATE;
+const { APP_ID,APP_CERTIFICATE } = process.env;
 const {RtcRole, RtcTokenBuilder, RtmTokenBuilder, RtmRole} = require("agora-access-token");
 
 //generate RTC token
