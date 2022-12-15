@@ -13,6 +13,6 @@ const nocache = (req, resp, next) => {
 //generate tokens
 router
     .route('/token')
-    .get(nocache,authorizationService.authorizationRTMToken);
+    .post(nocache,authorizationService.authorizationRTMToken);
 
 module.exports = router;

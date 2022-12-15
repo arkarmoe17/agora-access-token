@@ -4,8 +4,9 @@ const { APP_ID } = process.env;
 
 //Authorization RTM Token
 function authorizationRTMToken(req, resp) {
-    const token = req.query.token;
-    const uid = req.query.uid;
+    console.log("req.query.token ::", req.body);
+    const token = req.body.token;
+    const uid = req.body.uid;
 
     // Set request parameters
     const options = {
